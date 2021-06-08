@@ -29,9 +29,9 @@ public class ProductController extends EntityController<ProductService, ProductR
 	
 	@GET
 	@Path("all")
-	@Produces(MediaType.TEXT_PLAIN)
-	public String getAllProducts() { 
-		return service.getAllProducts().toString();
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Product> getAllProducts() { 
+		return service.getAllProducts();
 	}
 	
 	@GET
